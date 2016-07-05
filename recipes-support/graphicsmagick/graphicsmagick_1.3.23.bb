@@ -27,37 +27,3 @@ FILES_${PN} += "${libdir}/GraphicsMagick-${PV}/config \
                 ${datadir}/GraphicsMagick-${PV} "
 
 BBCLASSEXTEND = "native"
-
-ALTERNATIVE_PRIORITY = "100"
-
-ALTERNATIVE_${PN} = "compare composite conjure convert identify mogrify \
-    montage stream"
-
-ALTERNATIVE_TARGET[compare] = "${bindir}/gm"
-ALTERNATIVE_TARGET[composite] = "${bindir}/gm"
-ALTERNATIVE_TARGET[conjure] = "${bindir}/gm"
-ALTERNATIVE_TARGET[convert] = "${bindir}/gm"
-ALTERNATIVE_TARGET[identify] = "${bindir}/gm"
-ALTERNATIVE_TARGET[mogrify] = "${bindir}/gm"
-ALTERNATIVE_TARGET[montage] = "${bindir}/gm"
-ALTERNATIVE_TARGET[stream] = "${bindir}/gm"
-
-ALTERNATIVE_${PN}-doc = "compare.1 composite.1 conjure.1 convert.1 \
-    identify.1 mogrify.1 montage.1 stream.1"
-
-ALTERNATIVE_LINK_NAME[compare.1] = "${mandir}/man1/compare.1"
-ALTERNATIVE_TARGET[compare.1] = "${mandir}/man1/gm.1"
-ALTERNATIVE_LINK_NAME[composite.1] = "${mandir}/man1/composite.1"
-ALTERNATIVE_TARGET[composite.1] = "${mandir}/man1/gm.1"
-ALTERNATIVE_LINK_NAME[conjure.1] = "${mandir}/man1/conjure.1"
-ALTERNATIVE_TARGET[conjure.1] = "${mandir}/man1/gm.1"
-ALTERNATIVE_LINK_NAME[convert.1] = "${mandir}/man1/convert.1"
-ALTERNATIVE_TARGET[convert.1] = "${mandir}/man1/gm.1"
-ALTERNATIVE_LINK_NAME[identify.1] = "${mandir}/man1/identify.1"
-ALTERNATIVE_TARGET[identify.1] = "${mandir}/man1/gm.1"
-ALTERNATIVE_LINK_NAME[mogrify.1] = "${mandir}/man1/mogrify.1"
-ALTERNATIVE_TARGET[mogrify.1] = "${mandir}/man1/gm.1"
-ALTERNATIVE_LINK_NAME[montage.1] = "${mandir}/man1/montage.1"
-ALTERNATIVE_TARGET[montage.1] = "${mandir}/man1/gm.1"
-ALTERNATIVE_LINK_NAME[stream.1] = "${mandir}/man1/stream.1"
-ALTERNATIVE_TARGET[stream.1] = "${mandir}/man1/gm.1"
